@@ -6,17 +6,34 @@
             <link rel="stylesheet" href="css/bootstrap.min.css">
             <link rel="stylesheet" href="css/mi.css">
 
-        <script language="JavaScript">
-            var synth = window.speechSynthesis; 
-                var voz = synth.getVoices();
+            <script language="JavaScript">
+            /*
+	        var synth = window.speechSynthesis; 
+            var voz = synth.getVoices();
             function hablar(frase){
-                var utterThis = new SpeechSynthesisUtterance(frase);///AQUI SE lE CAMBIA
+            var utterThis = new SpeechSynthesisUtterance(frase);///AQUI SE lE CAMBIA
             utterThis.voice= voz[04];
             utterThis.pitch = 1
             utterThis.rate = 1
-           synth.speak(utterThis);
+            synth.speak(utterThis);
             }
+			*/
+			
+				function hablar(frase) {
+						var u = new SpeechSynthesisUtterance();
+						//var x = document.getElementById("frm1");
+						//var txt = "";
+						//txt = x.elements[0].value
+						u.text = frase;
+						u.lang = 'es-MX';
+						speechSynthesis.speak(u);      
+						//navigator.notification.vibrate(2000);
+						//document.getElementById("frm1").reset();
+  				}
         </script> 
+		
+	
+		
     </head>
     <body>
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
